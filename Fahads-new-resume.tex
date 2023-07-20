@@ -1,0 +1,118 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fontspec}
+%\setmainfont{Arial}
+\setmainfont[AutoFakeSlant=0.2]{Tahoma}
+\usepackage{paracol}
+\usepackage{lipsum}
+\usepackage{titlesec}
+\usepackage{color}
+\usepackage{enumitem}
+\usepackage{ragged2e}
+\usepackage{fontawesome5}
+\usepackage{tikz}
+\usetikzlibrary{shadows}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+% Sections formatting
+\titleformat{\section}{
+	\vspace{-4pt}\raggedright\color{black}\Large\bfseries\MakeUppercase
+}{}{0em}{}[\vspace{-5pt}]
+
+
+% Verify button
+\tikzstyle{buttonstyle} = [rectangle, rounded corners, fill = blue!30, draw = blue!80, drop shadow, font={\sffamily\bfseries}, text=white]
+
+\newcommand*{\button}[1]{\tikz{\node[buttonstyle] {#1};}}
+
+% Custom commands
+\newcommand{\resumeItem}[1]{
+	\item{
+		{#1 \vspace{-2pt}}
+	}
+}
+\newcommand{\resumeProjectHeading}[1]{\raggedright
+	\vspace{-2pt}\item{
+		{\textbf{#1}}} \vspace{5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{\raggedright
+	\vspace{-2pt}\item{{#1} $|$ \textbf{#2} $|$ \textit{#3} $|$ {#4}} \vspace{5pt}
+}
+
+\newcommand{\resumeEdSubheading}[5]{\raggedright
+	\vspace{-2pt}\item{\textbf{\MakeUppercase{#1}} \\ {#2} \\ {#3} $|$ \small{#4}} \\ {#5} \vspace{5pt}
+}
+
+\newcommand{\course}[4]{\raggedright
+	\vspace{-2pt}\item{\textbf{#1} \\ {#2} $|$ {#3} \\ {#4}} \vspace{5pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+%%Items list for tor
+%\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{5pt}}
+
+
+\begin{document}
+	\begin{center}
+		\textbf{\Huge  Md. Fahad Rahman} \\ \vspace{1em}
+		 \faPhone* \href{tel: +8801760979908}{+880-1760979908} $|$ \href{mailto:fahad9993@gmail.com}{\faEnvelope[regular]{ fahad9993@gmail.com}} $|$ 
+		\href{https://linkedin.com/in/fahad9993}{\faLinkedin { linkedin.com/in/fahad9993}} $|$
+		\href{https://github.com/fahad9993}{\faGithub{ https://github.com/fahad9993}}
+	\end{center}
+%\hrule
+%\noindent\rule{\textwidth}{1pt}
+\thispagestyle{empty}
+\vspace{-1.5em}
+\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
+
+\columnratio{0.7}
+\begin{paracol}{2}
+	
+	\input{parts/Experiences}
+	\input{parts/Skills}
+		
+	\switchcolumn
+	
+	\input{parts/Education}
+	
+	\section{Coursework}
+	
+	\resumeSubHeadingListStart
+	
+	\course
+	{Introduction to Thermodynamics: Transferring Energy from Here to There}{Apr 2020}{University of Michigan (offered through Coursera)}{\button{\href{https://coursera.org/verify/L2QM5SCN6EXG}{verify}}}
+	
+	\resumeSubHeadingListEnd
+	
+	\section{Thesis}
+	
+	\resumeSubHeadingListStart
+	
+	\resumeProjectHeading
+	{Modification of the Experimental Setup for Measuring Viscoelastic Response of Super Elastic Shape Memory Alloy Rod under Bending and Twisting}
+	\resumeItemListStart
+	\resumeItem{Nicket-Titanium (NiTi) Shape-Memory Alloy (SMA) is used.}
+	\resumeItem{A Force Sensing Resistor (FSR) is used to measure the corresponding force.}
+	\resumeItem{For Bending load calculation, a wooden quarter circle with a radius of 144 mm is used.}
+	\resumeItem{In torsional loading, the experiment is done under different angles at 15-degree interval.}
+	\resumeItemListEnd
+	
+	\resumeSubHeadingListEnd
+\end{paracol}
+\end{document}
