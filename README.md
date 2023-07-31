@@ -2,6 +2,12 @@
 
 This CV is written in $\LaTeX$ for professional purposes. I am working frequently to give it a more professional look.
 
+The following sections are separated for more manageable code:
+
+* Education
+* Experiences
+* Skill
+
 I encourage you to feel free to download the source code or fork it and modify it according to your needs. :smile:
 
 ***Don't forget to give it a thumbs up with a :star: !!!***
